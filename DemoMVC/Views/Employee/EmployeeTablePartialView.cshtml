@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EmployeeViewModel>
+    <table id="EmpTable" class="table table-hover table-striped">
+
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(e => e.Name)</th>
+                <th>@Html.DisplayNameFor(e => e.Address)</th>
+                <th>@Html.DisplayNameFor(e => e.Email)</th>
+                <th>@Html.DisplayNameFor(e => e.Salary)</th>
+                <th>@Html.DisplayNameFor(e => e.Department)</th>
+                <th>@Html.DisplayNameFor(e => e.HireDate)</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody class="tBody">
+        @foreach (var employee in Model)
+        {
+                    <tr>
+                      <td class="tName">@employee.Name</td>
+                      <td class="tAddress">@employee.Address</td>
+                      <td class="tEmail">@Html.DisplayFor(M=> employee.Email)</td>
+                      <td class="tSalary">@Html.DisplayFor(M => employee.Salary)</td>
+                      <td class="tDepartment">@employee.Department?.Name</td>
+                      <td class="tHiredate">@employee.HireDate</td>
+
+                      <partial name="_ButtonViewPartial" model="@employee.Id.ToString()" />
+
+                    </tr>
+        }
+        </tbody>
+
+    </table>

@@ -1,0 +1,24 @@
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.deps.json
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.dll
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.pdb
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.AssemblyInfo.cs
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.dll
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\refint\DemoDAL.dll
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.pdb
+C:\Users\user\Desktop\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\ref\DemoDAL.dll
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.deps.json
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.dll
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\bin\Debug\net5.0\DemoDAL.pdb
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.csproj.AssemblyReference.cache
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.AssemblyInfoInputs.cache
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.AssemblyInfo.cs
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.csproj.CoreCompileInputs.cache
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.dll
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\refint\DemoDAL.dll
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\DemoDAL.pdb
+E:\route course\.net\C#\WebDemoMVC Solution\DemoDAL\obj\Debug\net5.0\ref\DemoDAL.dll

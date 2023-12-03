@@ -1,0 +1,89 @@
+﻿@model IEnumerable<EmployeeViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4">All Employees</h1>
+
+<a asp-controller="Employee" asp-action="Create" class="mb-4 btn btn-primary">Create Employee</a>
+
+<div class="m-auto">
+    <form asp-action="Index" class="my-3 ">
+    <div class="row w-100">
+        <div class="col-md-10">
+            <input id="Search" placeholder="Search For Name" name="SearchName" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <input type="submit" value="Search" class="btn btn-warning btn-block"/>
+        </div>
+    </div>
+
+</form>
+</div>
+
+
+
+
+
+@if(Model.Count() > 0)
+{
+        <table id="EmpTable" class="table table-hover table-striped">
+
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(e => e.Name)</th>
+                    <th>@Html.DisplayNameFor(e => e.Address)</th>
+                    <th>@Html.DisplayNameFor(e => e.Email)</th>
+                    <th>@Html.DisplayNameFor(e => e.Salary)</th>
+                    <th>@Html.DisplayNameFor(e => e.Department)</th>
+                    <th>@Html.DisplayNameFor(e => e.HireDate)</th>
+                    <th>Details</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody class="tBody">
+            @foreach (var employee in Model)
+            {
+                <tr>
+                  <td class="tName">@employee.Name</td>
+                  <td class="tAddress">@employee.Address</td>
+                  <td class="tEmail">@Html.DisplayFor(M=> employee.Email)</td>
+                  <td class="tSalary">@Html.DisplayFor(M => employee.Salary)</td>
+                  <td class="tDepartment">@employee.Department?.Name</td>
+                  <td class="tHiredate">@employee.HireDate</td>
+
+                  <partial name="_ButtonViewPartial" model="@employee.Id.ToString()" />
+
+                </tr>
+            }
+            </tbody>
+
+        </table>
+}
+else
+{
+    <div class="py-2 h3 alert alert-success">There is No Employee :(</div>
+}
+
+<script>
+    const SearchBar = document.getElementById("Search")
+    const table = $("table")
+    $("#Search").keyup(async function (event) {
+    var searchValue = SearchBar.value
+    $.ajax({
+        URL: `/Employee/Search`,
+        type: 'GET',
+        data: { search: searchValue },
+        success: function (result) {
+            console.log(result);
+            table.html(result);
+        },
+        error: function (xhr, status, error) {
+            console.log(error);
+        }
+    });
+});
+</script>

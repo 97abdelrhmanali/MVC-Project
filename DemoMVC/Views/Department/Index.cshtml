@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DepartmentViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4">All Department</h1>
+
+<a asp-controller="Department" asp-action="Create" class="mb-4 btn btn-primary">Create New Department</a>
+
+@if(Model.Count() > 0)
+{
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(D => D.Code)</th>
+                <th>@Html.DisplayNameFor(D => D.Name)</th>
+                <th>@Html.DisplayNameFor(D => D.DateOfCreation)</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach(var department in Model)
+            {
+                <tr>
+                      <td>@department.Code</td>
+                      <td>@department.Name</td>
+                      <td>@department.DateOfCreation</td>
+                      <partial name="_ButtonViewPartial" model="@department.Id.ToString()" />
+
+                </tr>
+            }
+    </tbody>
+    </table>
+}
+
+else{
+    <div class="py-2 alert alert-secondary">
+        <h3>
+            There is no Department :(
+        </h3>
+    </div>
+}

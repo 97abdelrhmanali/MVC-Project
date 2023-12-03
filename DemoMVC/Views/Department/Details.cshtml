@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="mb-4">Details Of The Department</h1>
+
+<form asp-action="Create">
+    <partial name="PartialViews/DeleteDetailsPartialView"/>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>  |  
+    <a asp-action="Index">Back To List</a>
+</form>
+

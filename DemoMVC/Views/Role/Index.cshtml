@@ -1,0 +1,64 @@
+﻿@model IEnumerable<RoleViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="mb-4">All Users</h1>
+
+<a asp-controller="Role" asp-action="Create" class="mb-4 btn btn-primary">Create Role</a>
+
+
+<div class="m-auto">
+    <form asp-action="Index" class="my-3 ">
+    <div class="row w-100">
+        <div class="col-md-10">
+            <input id="Search" placeholder="Search For Email" name="name" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <input type="submit" value="Search" class="btn btn-warning btn-block"/>
+        </div>
+    </div>
+
+</form>
+</div>
+
+
+
+
+
+@if (Model.Count() > 0)
+{
+        <table id="EmpTable" class="table table-hover table-striped">
+
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(u => u.Id)</th>
+                    <th>@Html.DisplayNameFor(u => u.RoleName)</th>
+                    <th>Details</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            @foreach (var role in Model)
+            {
+                        <tr>
+                          <td>@Html.DisplayFor(M=>role.Id)</td>
+                          <td>@Html.DisplayFor(M=>role.RoleName)</td>
+
+                           <partial name="_ButtonViewPartial" model="@role.Id" />
+
+                        </tr>
+            }
+            </tbody>
+
+        </table>
+
+}
+else
+{
+        <div class="py-2 h3 alert alert-success">There is No Employee :(</div>
+}
+

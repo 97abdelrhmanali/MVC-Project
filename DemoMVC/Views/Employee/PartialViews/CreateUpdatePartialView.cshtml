@@ -1,0 +1,49 @@
+﻿@model EmployeeViewModel
+@inject IUnitOfWork unitOfWork
+@{
+    var dep = await unitOfWork.DepartmentRepository.GetAllAsync();
+    var department = new SelectList(dep, "Id", "Name");
+}
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Address"></label>
+        <input asp-for="Address" class="form-control" />
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Salary"></label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="@Model.DepartmentId"></label>
+        <select asp-for="@Model.DepartmentId" asp-items="department" class="form-control">
+            <option>---- Select Department ------</option>
+        </select>
+        <span asp-validation-for="@Model.DepartmentId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group form-check">
+        <input class="form-check-input" type="checkbox" asp-for="@Model.IsActive" />
+        <label class="form-check-label" asp-for="@Model.IsActive"></label>
+    </div>
+    
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Image"></label>
+        <input class="form-control-file" asp-for="Image"/>
+    </div>
+
